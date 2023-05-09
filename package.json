@@ -1,0 +1,19 @@
+{
+  "dependencies": {
+    "cypress": "^12.11.0"
+  },
+  "name": "automation-ksk-site",
+  "description": "Automação para o site KSK",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "npx cypress open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yohanlimapo/automation-ksk-site"
+  },
+  "author": "Yohan Lim-Apo",
+  "license": "MIT"
+}
