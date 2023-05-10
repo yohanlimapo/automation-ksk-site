@@ -21,4 +21,16 @@ describe('Testes na página de carreiras', ()=>{
       cy.contains('button', 'Enviar').click();
       cy.contains('Sua candidatura foi enviada com sucesso', {timeout:10000}).should('be.visible')
   })
+
+  it("Verificar campo URL LinkedIn (deve ser obrigatório)",()=>{
+    cy.contains('span', 'ANALISTA MONITORAÇÃO').click();
+    cy.contains('a', 'Enviar CV').click();
+    //vai abrir logo abaixo o forms para preencher
+    cy.contains('Nome').type("Yohan Dornelles");
+    cy.contains('E-mail').type("yohan.limapo@kstack.com.br");
+    cy.contains('URL do LinkedIn').click();
+    cy.contains('Telefone').type("61996085486");
+    cy.contains('span', 'Campo obrigatório').should('be.visible')
+    cy.contains('button', 'Enviar').click();
+    })
 })
