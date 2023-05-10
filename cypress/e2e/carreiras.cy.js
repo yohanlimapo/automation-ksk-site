@@ -15,8 +15,10 @@ describe('Testes na página de carreiras', ()=>{
       cy.contains('a', 'Enviar CV').click();
       //vai abrir logo abaixo o forms para preencher
       cy.contains('Nome').type("Yohan Dornelles");
-      cy.contains('E-mail').type("yohan.limapo@gmail.com");
-      cy.contains().type();
-      cy.contains('button', 'Enviar').click()
+      cy.contains('E-mail').type("yohan.limapo@kstack.com.br");
+      cy.contains('URL do LinkedIn').type("https://www.linkedin.com/in/yohanlimapo/");
+      cy.contains('Telefone').type("61996085486");
+      cy.contains('button', 'Enviar').click();
+      cy.contains('Sua candidatura foi enviada com sucesso', {timeout:10000}).should('be.visible')
   })
 })
