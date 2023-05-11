@@ -51,6 +51,18 @@ describe('Testes na página de carreiras', ()=>{
     cy.contains('button', 'Enviar').click();
     })
 
+    it.only("URL LinkedIn inválida",()=>{
+        cy.contains('span', 'ANALISTA MONITORAÇÃO').click();
+        cy.contains('a', 'Enviar CV').click();
+        //vai abrir logo abaixo o forms para preencher
+        cy.contains('Nome').type("Yohan Dornelles");
+        cy.contains('E-mail').type("yohan.limapo@kstack.com.br");
+        cy.contains('URL do LinkedIn').type("yohan");
+        cy.contains('Telefone').type("61996085486");
+        cy.contains('span', 'Esta URL é inválida').should('be.visible')
+        cy.contains('button', 'Enviar').click();
+        })
+
     
 
 
