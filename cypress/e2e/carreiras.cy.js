@@ -22,7 +22,17 @@ describe('Testes na página de carreiras', ()=>{
       cy.contains('Sua candidatura foi enviada com sucesso', {timeout:10000}).should('be.visible')
   })
 
-  it("Verificar campo URL LinkedIn (deve ser obrigatório)",()=>{
+    it("Nome Incompleto", ()=>{
+    cy.contains('span', 'ANALISTA MONITORAÇÃO').click();
+    cy.contains('a', 'Enviar CV').click();
+    cy.contains('Nome').type("Yohan");
+    cy.contains('E-mail').type("yohan.limapo@kstack.com.br");
+    cy.contains('span', 'Nome incompleto').should('be.visible')
+    })
+
+
+
+  it("URL LinkedIn Obrigatório",()=>{
     cy.contains('span', 'ANALISTA MONITORAÇÃO').click();
     cy.contains('a', 'Enviar CV').click();
     //vai abrir logo abaixo o forms para preencher
@@ -33,4 +43,9 @@ describe('Testes na página de carreiras', ()=>{
     cy.contains('span', 'Campo obrigatório').should('be.visible')
     cy.contains('button', 'Enviar').click();
     })
+
+    
+
+
+
 })
