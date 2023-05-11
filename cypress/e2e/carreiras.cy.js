@@ -30,6 +30,15 @@ describe('Testes na página de carreiras', ()=>{
     cy.contains('span', 'Nome incompleto').should('be.visible')
     })
 
+    it.only("Email campo obrigatório", ()=>{
+        cy.contains('span', 'ANALISTA MONITORAÇÃO').click();
+        cy.contains('a', 'Enviar CV').click();
+        cy.contains('Nome').type("Yohan Dornelles");
+        cy.contains('E-mail').click();
+        cy.contains('URL do LinkedIn').type("https://www.linkedin.com/in/yohanlimapo/");
+        cy.contains('span', 'Campo obrigatório').should('be.visible')
+    })
+
     it("Email inválido", ()=>{
         cy.contains('span', 'ANALISTA MONITORAÇÃO').click();
         cy.contains('a', 'Enviar CV').click();
@@ -51,7 +60,7 @@ describe('Testes na página de carreiras', ()=>{
     cy.contains('button', 'Enviar').click();
     })
 
-    it.only("URL LinkedIn inválida",()=>{
+    it("URL LinkedIn inválida",()=>{
         cy.contains('span', 'ANALISTA MONITORAÇÃO').click();
         cy.contains('a', 'Enviar CV').click();
         //vai abrir logo abaixo o forms para preencher
