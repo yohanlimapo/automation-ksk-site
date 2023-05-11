@@ -30,7 +30,7 @@ describe('Testes na página de carreiras', ()=>{
     cy.contains('span', 'Nome incompleto').should('be.visible')
     })
 
-    it.only("Email campo obrigatório", ()=>{
+    it("Email campo obrigatório", ()=>{
         cy.contains('span', 'ANALISTA MONITORAÇÃO').click();
         cy.contains('a', 'Enviar CV').click();
         cy.contains('Nome').type("Yohan Dornelles");
