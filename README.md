@@ -12,9 +12,10 @@ Beleza, Yohan, mas como faço para rodar aqui na minha máquina local?
 1. Inicialize o arquivo com o comando:
         $ npm init
 2. Agora é só rodar os testes use o comando:
-        $ npm run test
-    ou
         $ npx cypress open
+    ou
+        $ npm run testes //isso se você tiver as dependências instaladas!
+        
 3. Para rodar os testes, sem abrir a interface do Cypress, basta digitar o comando:
         $ npx cypress run
         

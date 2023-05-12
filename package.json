@@ -6,7 +6,9 @@
   "description": "Automação para o site KSK",
   "version": "1.0.0",
   "main": "index.js",
-  "devDependencies": {},
+  "devDependencies": {
+    "mochawesome": "^7.1.3"
+  },
   "scripts": {
     "test": "npx cypress open"
   },
