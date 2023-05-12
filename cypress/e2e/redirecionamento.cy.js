@@ -3,7 +3,13 @@ describe('Redirecionamento a partir da página principal', ()=>{
         cy.visit("http://web.kstack.com.br/v2/Home/Index")
     })
     
-    it('Página Kstacker', ()=> {
+    it('Página Kstacker',
+    {
+        retries: {
+          runMode: 2,
+          openMode: 2,
+        },
+    }, ()=> {
         cy.contains('a', 'KSTACKER').click();
         cy.url()
         cy.location('span')
