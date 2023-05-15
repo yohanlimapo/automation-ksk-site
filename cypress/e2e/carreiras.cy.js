@@ -77,15 +77,14 @@ describe('Testes na página de carreiras', ()=>{
         cy.contains('button', 'Enviar').click();
         })
 
-        it.only("Telefone campo obrigatório",()=>{
-            cy.contains('span', 'ANALISTA MONITORAÇÃO').click();
-            cy.contains('a', 'Enviar CV').click();
-            cy.contains('Nome').type("Yohan Dornelles");
-            cy.contains('E-mail').type("yohan.limapo@kstack.com.br");
-            cy.contains('URL do LinkedIn').type("https://www.linkedin.com/in/yohanlimapo/");
-            cy.contains('Telefone').click();
-            cy.contains('button', 'Enviar').click();
-            cy.contains('E-mail').click();
-            cy.contains('span', 'Campo obrigatório').should('be.visible')
-            })
+    it("Telefone campo obrigatório",()=>{
+        cy.contains('span', 'ANALISTA MONITORAÇÃO').click();
+        cy.contains('a', 'Enviar CV').click();
+        cy.contains('Nome').type("Yohan Dornelles");
+        cy.contains('E-mail').type("yohan.limapo@kstack.com.br");
+        cy.contains('URL do LinkedIn').type("https://www.linkedin.com/in/yohanlimapo/");
+        cy.contains('Telefone').click();
+        cy.contains('E-mail').click();
+        cy.contains('span', 'Campo obrigatório').should('be.visible')
+        })
 })
