@@ -30,7 +30,7 @@ Os casos de testes estão separados em 4 pastas, conforme suas funcionalidades:
         <code> $ npx cypress open </code>
     ou
         <code> $ npm run testes </code>
-        <samp>//isso se você tiver as dependências instaladas!</samp>
+        <br><samp>//isso se você tiver as dependências instaladas!</samp>
 3. Para rodar os testes, sem abrir a interface do Cypress, basta digitar o comando:
         <code> $ npx cypress run </code>
     Provavelmente vai ficar visualmente feio, para isso você pode utilizar uma biblioteca para deixar mais bonito. No caso utilizamos o mochawesome. Para tanto escreva o comando:
