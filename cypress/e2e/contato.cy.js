@@ -1,6 +1,6 @@
 describe('Testes na página de contato', ()=>{
     beforeEach(() => {
-        cy.visit("http://web.kstack.com.br/v2/Home/Index")
+        cy.visit("http://www.kstack.com.br/")
         cy.contains('a', 'CONTATO').click()
     })
     it("Nome campo obrigatório", ()=>{
