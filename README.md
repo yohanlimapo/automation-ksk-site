@@ -29,7 +29,7 @@ Os casos de testes estão separados em 4 pastas, conforme suas funcionalidades:
 2. Agora é só rodar os testes use o comando:
         <code> $ npx cypress open </code>
     ou
-        <code> $ npm run testes </code>
+        <code> $ npm run tests </code>
         <br><samp>//isso se você tiver as dependências instaladas!</samp>
 3. Para rodar os testes, sem abrir a interface do Cypress, basta digitar o comando:
         <code> $ npx cypress run </code><br>

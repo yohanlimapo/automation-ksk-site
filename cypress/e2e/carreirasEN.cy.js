@@ -6,13 +6,13 @@ describe('Testes na página de carreiras versão Inglês', ()=>{
   })
 
   it("verificar se item das vagas eh clicavel",()=>{
-      cy.contains('span', 'JAVA').click();
+      cy.contains('span', 'FULL STACK').click();
       cy.contains('a', 'Send your CV').should('be.visible');
       //abrirá o perfil da vaga
   })
 
   it("preencher formulario da vaga",()=>{
-      cy.contains('span', 'JAVA').click();
+      cy.contains('span', 'FULL STACK').click();
       cy.contains('a', 'Send your CV').click();
       //vai abrir logo abaixo o forms para preencher
       cy.contains('Full Name').type("Yohan Dornelles");
@@ -23,7 +23,7 @@ describe('Testes na página de carreiras versão Inglês', ()=>{
       cy.contains('Your application has been sent successfully', {timeout:10000}).should('be.visible')
   })
   it("Nome campo obrigatório", ()=>{
-    cy.contains('span', 'JAVA').click();
+    cy.contains('span', 'FULL STACK').click();
     cy.contains('a', 'Send your CV').click();
     cy.contains('Full Name').click();
     cy.contains('E-mail').type('yohan.limapo@kstack.com.br');
@@ -31,7 +31,7 @@ describe('Testes na página de carreiras versão Inglês', ()=>{
 })
 
     it("Nome Incompleto", ()=>{
-    cy.contains('span', 'JAVA').click();
+    cy.contains('span', 'FULL STACK').click();
     cy.contains('a', 'Send your CV').click();
     cy.contains('Full Name').type("Yohan");
     cy.contains('E-mail').type("yohan.limapo@kstack.com.br");
@@ -39,7 +39,7 @@ describe('Testes na página de carreiras versão Inglês', ()=>{
     })
 
     it("Email campo obrigatório", ()=>{
-        cy.contains('span', 'JAVA').click();
+        cy.contains('span', 'FULL STACK').click();
         cy.contains('a', 'Send your CV').click();
         cy.contains('Full Name').type("Yohan Dornelles");
         cy.contains('E-mail').click();
@@ -48,7 +48,7 @@ describe('Testes na página de carreiras versão Inglês', ()=>{
     })
 
     it("Email inválido", ()=>{
-        cy.contains('span', 'JAVA').click();
+        cy.contains('span', 'FULL STACK').click();
         cy.contains('a', 'Send your CV').click();
         cy.contains('Full Name').type("Yohan Dornelles");
         cy.contains('E-mail').type("yohan");
@@ -57,7 +57,7 @@ describe('Testes na página de carreiras versão Inglês', ()=>{
     })
 
     it("URL LinkedIn Obrigatório",()=>{
-    cy.contains('span', 'JAVA').click();
+    cy.contains('span', 'FULL STACK').click();
     cy.contains('a', 'Send your CV').click();
     cy.contains('Full Name').type("Yohan Dornelles");
     cy.contains('E-mail').type("yohan.limapo@kstack.com.br");
@@ -68,7 +68,7 @@ describe('Testes na página de carreiras versão Inglês', ()=>{
     })
 
     it("URL LinkedIn inválida",()=>{
-        cy.contains('span', 'JAVA').click();
+        cy.contains('span', 'FULL STACK').click();
         cy.contains('a', 'Send your CV').click();
         cy.contains('Full Name').type("Yohan Dornelles");
         cy.contains('E-mail').type("yohan.limapo@kstack.com.br");
@@ -79,7 +79,7 @@ describe('Testes na página de carreiras versão Inglês', ()=>{
         })
 
     it("Telefone campo obrigatório",()=>{
-        cy.contains('span', 'JAVA').click();
+        cy.contains('span', 'FULL STACK').click();
         cy.contains('a', 'Send your CV').click();
         cy.contains('Full Name').type("Yohan Dornelles");
         cy.contains('E-mail').type("yohan.limapo@kstack.com.br");
